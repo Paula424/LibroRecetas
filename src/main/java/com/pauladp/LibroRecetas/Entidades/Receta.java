@@ -4,9 +4,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.w3c.dom.stylesheets.LinkStyle;
 
 import java.util.List;
+
 
 @Entity
 @Table(name = "recetas")
@@ -17,7 +17,7 @@ public class Receta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idReceta;
 
     private String nombre;
 
@@ -37,5 +37,9 @@ public class Receta {
     }
 
     private String fotoURL;
+
+
+    @OneToMany(mappedBy = "receta", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<MeGusta> meGustas;
 
 }
