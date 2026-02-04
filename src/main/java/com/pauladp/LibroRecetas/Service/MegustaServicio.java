@@ -24,8 +24,7 @@ public class MegustaServicio {
     }
 
     public List<MeGusta>listarPorReceta(Long recetaId){
-        return meGustaRepositorio.findByReceta_Id(recetaId);
-    }
+        return meGustaRepositorio.buscarPorRecetaId(recetaId);    }
 
     public void eliminarMeGusta(Long idMeGusta){
         meGustaRepositorio.deleteById(idMeGusta);
