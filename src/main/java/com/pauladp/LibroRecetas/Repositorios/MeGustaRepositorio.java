@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface MeGustaRepositorio extends JpaRepository<MeGusta, Long> {
 
-    List<MeGusta>findByRecetaId(Long recetaId);
+    List<MeGusta>findByReceta_Id(Long recetaId);
 }
