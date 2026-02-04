@@ -1,4 +1,4 @@
-package com.pauladp.LibroRecetas.Entidades;
+package com.pauladp.LibroRecetas.entidades;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

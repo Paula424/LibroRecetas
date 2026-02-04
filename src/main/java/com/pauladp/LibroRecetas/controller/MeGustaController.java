@@ -1,7 +1,7 @@
-package com.pauladp.LibroRecetas.Controller;
+package com.pauladp.LibroRecetas.controller;
 
-import com.pauladp.LibroRecetas.Entidades.MeGusta;
-import com.pauladp.LibroRecetas.Service.MegustaServicio;
+import com.pauladp.LibroRecetas.entidades.MeGusta;
+import com.pauladp.LibroRecetas.service.MegustaServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

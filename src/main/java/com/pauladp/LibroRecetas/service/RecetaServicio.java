@@ -1,8 +1,8 @@
-package com.pauladp.LibroRecetas.Service;
+package com.pauladp.LibroRecetas.service;
 
 
-import com.pauladp.LibroRecetas.Entidades.Receta;
-import com.pauladp.LibroRecetas.Repositorios.RecetaRepositorio;
+import com.pauladp.LibroRecetas.entidades.Receta;
+import com.pauladp.LibroRecetas.repositorios.RecetaRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

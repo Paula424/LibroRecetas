@@ -1,6 +1,6 @@
-package com.pauladp.LibroRecetas.Repositorios;
+package com.pauladp.LibroRecetas.repositorios;
 
-import com.pauladp.LibroRecetas.Entidades.Receta;
+import com.pauladp.LibroRecetas.entidades.Receta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
