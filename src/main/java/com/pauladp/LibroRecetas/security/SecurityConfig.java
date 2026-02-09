@@ -15,7 +15,7 @@ public class SecurityConfig {
                         .requestMatchers("/h2-console/**").permitAll() // Permite H2
                         .anyRequest().permitAll()
                 )
-                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin())) // CORRECTO
+                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin())) // Permite iframe de H2
                 .formLogin(form -> form.disable()); // Desactiva login
 
         return http.build();
