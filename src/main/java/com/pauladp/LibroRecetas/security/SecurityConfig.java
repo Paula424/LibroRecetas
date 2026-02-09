@@ -11,12 +11,12 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(csrf -> csrf.disable()) // Desactiva CSRF
+                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin())) // Permite iframe
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/h2-console/**").permitAll() // Permite H2
-                        .anyRequest().permitAll()
+                        .requestMatchers("/h2-console/**").permitAll() // H2 permitido
+                        .anyRequest().authenticated() // lo demás requiere login
                 )
-                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin())) // Permite iframe de H2
-                .formLogin(form -> form.disable()); // Desactiva login
+                .formLogin(form -> form.disable()); // desactiva login
 
         return http.build();
     }
