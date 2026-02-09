@@ -10,13 +10,13 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrf -> csrf.disable())
+                .csrf(csrf -> csrf.disable()) // Desactiva CSRF
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/h2-console/**").permitAll() // Permite H2
                         .anyRequest().permitAll()
                 )
-                .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin()))
-                .formLogin(form -> form.disable());
+                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin())) // CORRECTO
+                .formLogin(form -> form.disable()); // Desactiva login
 
         return http.build();
     }
