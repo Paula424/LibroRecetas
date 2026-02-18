@@ -28,7 +28,8 @@ public class MeGustaController {
     }
 
     @DeleteMapping("/{id}")
-    public void eliminarMeGusta(@PathVariable Long idMeGusta){
-        megustaServicio.eliminarMeGusta(idMeGusta);
+    public void eliminarMeGusta(@PathVariable Long id){
+        megustaServicio.eliminarMeGusta(id);
     }
+
 }
