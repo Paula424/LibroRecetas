@@ -1,5 +1,6 @@
 package com.pauladp.LibroRecetas.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -40,6 +41,7 @@ public class Receta {
 
 
     @OneToMany(mappedBy = "receta", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<MeGusta> meGustas;
 
 }

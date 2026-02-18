@@ -1,5 +1,6 @@
 package com.pauladp.LibroRecetas.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,5 +21,6 @@ public class MeGusta {
 
     @ManyToOne
     @JoinColumn(name = "receta_id")
+    @JsonIgnoreProperties("meGustas")
     private Receta receta;
 }
